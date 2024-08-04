@@ -1,0 +1,46 @@
+//================================================================
+// Nome Do Arquivo: string_word_count.c
+// File Name: string_word_count.c
+//
+// Descrição: O programa conta o número de palavras em uma string
+//================================================================
+ 
+// Protótipo da função
+int string_word_count(char str[]);
+ 
+// Libs
+#include <stdio.h>
+#include <stdlib.h>
+ 
+// Função main
+// Main Function
+int main(int argc, char** argv)
+{
+ char str[100];
+ int result;
+ 
+ // Lê a url
+ printf("Digite a string: ");
+ gets(str);
+ 
+ // Converte a string
+ result = string_word_count(str);
+ 
+ // Imprime o total de palavras
+ printf("O resultado: %d\n", result);
+ 
+ system("pause");
+ return 0;
+}
+ 
+int string_word_count(char str[]) {
+ int i, result = 1;
+ 
+ for(i = 0; str[i] != '\0'; i++) {
+ if(str[i] == ' ') {
+ result++;
+ }
+ }
+ 
+ return result;
+}
