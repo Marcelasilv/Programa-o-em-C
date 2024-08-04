@@ -1,0 +1,29 @@
+//================================================================
+// Descrição: Mostra o fatorial de um dado número sem
+//            recursividade
+//================================================================
+ 
+// Libs
+#include <stdio.h>
+#include <stdlib.h>
+ 
+// Função main
+// Main Function
+int main(int argc, char** argv)
+{
+ int n, fatorial, i;
+ 
+ printf("Digite o numero: ");
+ scanf("%d", &n);
+ 
+ // Calcula o fatorial
+ fatorial = 1;
+ for(i = n; i > 0; i--) {
+    fatorial *= i;
+ }
+ 
+ printf("Fatorial de %d: %d\n", n, fatorial);
+ 
+ system("pause");
+ return 0;
+}
